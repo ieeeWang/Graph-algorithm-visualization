@@ -12,3 +12,16 @@ a greedy algorithm). We push onto the priority queue if we can find a better
 path (smaller edge weight). The overall time complexity of Dijkstra's algorithm
 is *O(V<sup>2</sup>)* but is reduced to
 *O(|V| + |E|log|V|)* when implemented using a min-priority queue.
+
+
+
+Vertex 	 shortest dist 	 previous node
+0 -----	 0 -----	 0
+1 -----	 4 -----	 0
+2 -----	 12 -----	 1
+3 -----	 19 -----	 2
+4 -----	 21 -----	 5
+5 -----	 11 -----	 6
+6 -----	 9 -----	 7
+7 -----	 8 -----	 0
+8 -----	 14 -----	 2
