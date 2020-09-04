@@ -13,7 +13,7 @@ path (smaller edge weight). The overall time complexity of Dijkstra's algorithm
 is *O(V<sup>2</sup>)* but is reduced to
 *O(|V| + |E|log|V|)* when implemented using a min-priority queue.
 
-The following figure is implemented by using 'Dijkstra_shortest_path.py'.
+The following graph is implemented by using 'Dijkstra_shortest_path.py', output is the table below.
 <img src="images/graph_Dijkstra.png" width="400px" height="300px" />
 
 
