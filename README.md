@@ -14,7 +14,7 @@ is *O(V<sup>2</sup>)* but is reduced to
 *O(|V| + |E|log|V|)* when implemented using a min-priority queue.
 
 
-<img src="images/graph_Dijkstra.png" width="800px" height="500px" />
+<img src="images/graph_Dijkstra.png" width="400px" height="300px" />
 
 
 
