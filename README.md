@@ -1,5 +1,5 @@
 # Graph-algorithm-visualization
-implement of some common graph algorithms
+Here are implementation of some common graph algorithms.
 
 ### Dijkstra's Algorithm:
 
