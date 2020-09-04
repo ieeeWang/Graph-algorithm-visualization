@@ -2,7 +2,8 @@
 """
 Created on Sun Aug 30 18:22:23 2020
 Dijkstra's single source shortest path algorithm. 
-for undirected weighted graphs.
+for undirected weighted graphs by adjacency matrix.
+https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
 @author: lwang
 """
 
@@ -25,7 +26,7 @@ G.add_edge('A', 'B', weight=4)
 G.add_edge('B', 'D', weight=2)
 G.add_edge('A', 'C', weight=3)
 G.add_edge('C', 'D', weight=4)
-
+ 
 plt.figure(figsize=(4,4)) 
 nx.draw(G, with_labels=True)
 
@@ -35,14 +36,14 @@ labels = nx.get_edge_attributes(G,'weight')
 nx.shortest_path(G, 'A', 'D', weight='weight')
 
 #%% this list shows the adjacency matrix representation of the graph 
-graph_adj = [[0, 8, 0, 0, 0, 0, 0, 4, 0], 
-            [8, 0, 8, 0, 0, 0, 0, 11, 0], 
+graph_adj = [[0, 4, 0, 0, 0, 0, 0, 8, 0], 
+            [4, 0, 8, 0, 0, 0, 0, 11, 0], 
             [0, 8, 0, 7, 0, 4, 0, 0, 2], 
             [0, 0, 7, 0, 9, 14, 0, 0, 0], 
             [0, 0, 0, 9, 0, 10, 0, 0, 0], 
             [0, 0, 4, 14, 10, 0, 2, 0, 0], 
             [0, 0, 0, 0, 0, 2, 0, 1, 6], 
-            [4, 11, 0, 0, 0, 0, 1, 0, 7], 
+            [8, 11, 0, 0, 0, 0, 1, 0, 7], 
             [0, 0, 2, 0, 0, 0, 6, 7, 0]]; 
 
 
@@ -73,10 +74,10 @@ class Graph():
         self.graph = [[0 for column in range(vertices)]  
                     for row in range(vertices)] 
   
-    def printSolution(self, dist): 
-        print ("Vertex \tDistance from Source")
+    def printSolution(self, dist, pre_node): 
+        print ("Vertex \t shortest dist \t previous node")
         for node in range(self.V): 
-            print (node, "\t", dist[node]) 
+            print (node, "-----\t", dist[node],"-----\t", pre_node[node]) 
   
     # A utility function to find the vertex with  
     # minimum distance value, from the set of vertices  
@@ -104,16 +105,21 @@ class Graph():
         # in shortest path tree, i.e., whose minimum distance from source is 
         # calculated and finalized already. Initially, this set is empty.
         sptSet = [False] * self.V 
-  
+        
+        # 'pre_node' maintains a list that store the previous node of each node 
+        # in the shortest path
+        pre_node = [False] * self.V
+        pre_node[0] = src
+        
         for _ in range(self.V): 
             # Pick the minimum distance vertex from  
             # the set of vertices not yet processed.  
             # u is always equal to src in first iteration 
             u = self.minDistance(dist, sptSet) 
-  
+            
             # Put the minimum distance vertex in the  
             # shotest path tree 
-            sptSet[u] = True
+            sptSet[u] = True         
   
             # Update dist value of the adjacent vertices  
             # of the picked vertex only if the current  
@@ -122,9 +128,11 @@ class Graph():
             for v in range(self.V): # search throuth all adjacent vertices  
                 dist_add = self.graph[u][v]
                 if dist_add > 0 and sptSet[v] == False and (dist[v] > dist[u] + dist_add): 
-                    dist[v] = dist[u] + dist_add 
+                    dist[v] = dist[u] + dist_add
+                    # update 'pre_node' if a shorter path found 
+                    pre_node[v] = u
   
-        self.printSolution(dist) 
+        self.printSolution(dist, pre_node) 
   
     
 # Driver program 
@@ -133,3 +141,5 @@ g.graph = graph_adj;
   
 g.dijkstra(0); 
   
+
+
