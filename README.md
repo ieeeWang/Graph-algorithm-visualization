@@ -16,6 +16,8 @@ is *O(V<sup>2</sup>)* but is reduced to
 
 
 Vertex 	 shortest dist 	 previous node
+
+||
 |0 -----	 0 -----	 0|
 |1 -----	 4 -----	 0|
 |2 -----	 12 -----	 1|
