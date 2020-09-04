@@ -27,3 +27,13 @@ Vertex 	 shortest dist 	 previous node
 |6 -----	 9 -----	 7|
 |7 -----	 8 -----	 0|
 |8 -----	 14 -----	 2|
+
+
+
+| Algorithm 						| Time Complexity     				| Notes     			|
+| :------------- 					| :------------- 					|	:------------- 		|
+| **BFS** 							| *O(V + E)*						|	Uses a queue					|
+| **DFS** 							| *O(V + E)*						|	Uses a stack					|
+| **Topological Sort** 				| *O(V + E)*						| Use when graph is a _DAG_					|
+| **Dijkstra's Algorithm** 			| *O(V + ElogV)*						|Implemented using a min priority queue|
+| **Prim's Algorithm** 				| *O(V + ElogV)*						|Implemented using a min priority queue|
