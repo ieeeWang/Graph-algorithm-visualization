@@ -40,10 +40,18 @@ hand is a tree that connects all vertices in a graph with a minimum cost
 (or minimum edge weights). One of the most common algorithm to find the MST of a
 graph is ***Prim's Algorithm***. 
 
-<img src="images/MST_prim.png" width="400px" height="300px" />
+<img src="images/MST_prim.png" width="800px" height="500px" />
+
+Here show a example and its solution:
 
 <img src="images/graph_mst_prim.png" width="400px" height="300px" />
 
+
+Edge 	 Weight
+0 - 1 	 2
+1 - 2 	 3
+0 - 3 	 6
+1 - 4 	 5
 
 
 
