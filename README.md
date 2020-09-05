@@ -1,5 +1,5 @@
 # Graph-algorithm-visualization
-Here are implementation (using both python and c++) of some common graph algorithms.
+Here are implementation (using both Python and C++) of some common graph algorithms.
 
 ### Dijkstra's Algorithm: the shortest path
 
@@ -66,4 +66,4 @@ Edge 	 Weight\
 
 ## References
 
-* See GIFs (and C++) of graphs [here](https://github.com/ieeeWang/Graph-Algorithms).
+* See GIFs (and C++) of graph algorithms [here](https://github.com/ieeeWang/Graph-Algorithms).
