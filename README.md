@@ -1,5 +1,5 @@
 # Graph-algorithm-visualization
-Here are implementation of some common graph algorithms.
+Here are implementation (using both python and c++) of some common graph algorithms.
 
 ### Dijkstra's Algorithm: the shortest path
 
