@@ -42,7 +42,7 @@ graph is ***Prim's Algorithm***.
 
 <img src="images/MST_prim.png" width="800px" height="500px" />
 
-Here show a example and its solution:
+Here show an example and its solution (MST_Prim.py):
 
 <img src="images/graph_mst_prim.png" width="400px" height="300px" />
 
@@ -51,7 +51,7 @@ Edge 	 Weight\
 0 - 1 , 	 2 \
 1 - 2 , 	 3 \
 0 - 3 , 	 6 \
-1 - 4 , 	 5 \
+1 - 4 , 	 5 
 
 
 ## Time Complexity Cheatsheet
@@ -62,3 +62,8 @@ Edge 	 Weight\
 | **Topological Sort** 				| *O(V + E)*						| Use when graph is a _DAG_					|
 | **Dijkstra's Algorithm** 			| *O(V + ElogV)*						|Implemented using a min priority queue|
 | **Prim's Algorithm** 				| *O(V + ElogV)*						|Implemented using a min priority queue|
+
+
+## References
+
+* See GIFs (and C++) of graphs [here](https://github.com/ieeeWang/Graph-Algorithms).
