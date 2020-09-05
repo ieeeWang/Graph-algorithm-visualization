@@ -47,13 +47,11 @@ Here show a example and its solution:
 <img src="images/graph_mst_prim.png" width="400px" height="300px" />
 
 
-|Edge 	 Weight\
+Edge 	 Weight\
 0 - 1 	 2 \
 1 - 2 	 3 \
 0 - 3 	 6 \
 1 - 4 	 5 \
-
-
 
 
 ## Time Complexity Cheatsheet
