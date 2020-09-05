@@ -14,6 +14,7 @@ is *O(V<sup>2</sup>)* but is reduced to
 *O(|V| + |E|log|V|)* when implemented using a min-priority queue.
 
 The following graph is implemented by using 'Dijkstra_shortest_path.py', output is the table below.
+
 <img src="images/graph_Dijkstra.png" width="400px" height="300px" />
 
 
@@ -29,6 +30,20 @@ The following graph is implemented by using 'Dijkstra_shortest_path.py', output 
 |6 	 |9 |	 7|
 |7	 |8 |	 0|
 |8 	 |14 |	 2|
+
+
+### Minimum Spanning Trees (MST):
+
+A spanning tree is essentially a tree that connects all the vertices in a graph
+and is a subgraph of the original graph, G. A minimum spanning tree on the other
+hand is a tree that connects all vertices in a graph with a minimum cost
+(or minimum edge weights). One of the most common algorithm to find the MST of a
+graph is ***Prim's Algorithm***. 
+
+<img src="images/MST_prim.png" width="400px" height="300px" />
+
+<img src="images/graph_mst_prim.png" width="400px" height="300px" />
+
 
 
 
