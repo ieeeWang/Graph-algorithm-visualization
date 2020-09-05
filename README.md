@@ -1,7 +1,7 @@
 # Graph-algorithm-visualization
 Here are implementation of some common graph algorithms.
 
-### Dijkstra's Algorithm:
+### Dijkstra's Algorithm: the shortest path
 
 Dijkstra's algorithm is arguably one of the most common algorithm used to find
 the shortest path between the source vertex to every other vertex in the graph.
@@ -47,8 +47,8 @@ Here show a example and its solution:
 <img src="images/graph_mst_prim.png" width="400px" height="300px" />
 
 
-Edge 	 Weight
-0 - 1 	 2
+|Edge 	 Weight|
+|0 - 1 	 2|
 1 - 2 	 3
 0 - 3 	 6
 1 - 4 	 5
